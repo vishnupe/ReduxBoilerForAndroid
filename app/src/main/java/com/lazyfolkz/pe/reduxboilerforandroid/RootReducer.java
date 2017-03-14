@@ -10,13 +10,13 @@ import com.lazyfolkz.pe.reduxboilerforandroid.redux.Reducer;
 public class RootReducer implements Reducer<GlobalState> {
     @Override
     public GlobalState reduce(GlobalState currentState, Action action) {
-        // use immutable object here
+        GlobalState newState = new GlobalState(currentState);
         switch (action.type){
-            case ActionTypes.INC : currentState.count++;
-                return currentState;
-            case ActionTypes.DEC : currentState.count--;
-                return currentState;
-            default: return currentState;
+            case ActionTypes.INC : newState.count++;
+                return newState;
+            case ActionTypes.DEC : newState.count--;
+                return newState;
+            default: return newState;
         }
     }
 }

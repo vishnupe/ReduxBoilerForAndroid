@@ -1,7 +1,7 @@
 package com.lazyfolkz.pe.reduxboilerforandroid.redux;
 
 /**
- * Created by qburst on 13/3/17.
+ * Created by vishnupe on 13/3/17.
  */
 
 public interface Reducer <State> {

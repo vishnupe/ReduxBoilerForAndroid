@@ -5,6 +5,14 @@ package com.lazyfolkz.pe.reduxboilerforandroid;
  */
 
 public class GlobalState {
-    public int count = 1;
+    public int count;
+
+    public GlobalState(){
+        this.count=1;
+    }
+
+    public GlobalState(GlobalState another){
+        this.count = another.count;
+    }
 
 }
