@@ -5,5 +5,5 @@ package com.lazyfolkz.pe.reduxboilerforandroid.redux;
  */
 
 public interface Reducer <State> {
-     State reduce(State currentState, Action action);
+     State reduce(State currentState, Action action) throws NoSuchFieldException, IllegalAccessException;
 }

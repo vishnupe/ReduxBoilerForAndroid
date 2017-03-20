@@ -34,7 +34,7 @@ public class Store <State> {
         subscribers.remove(listnerId);
     }
 
-    public void dispatch(Action action){
+    public void dispatch(Action action) throws NoSuchFieldException, IllegalAccessException {
         Log.d("DISPATCHED",action.type);
         currentState = reducer.reduce(currentState,action);
         for(UUID key : subscribers.keySet()){
